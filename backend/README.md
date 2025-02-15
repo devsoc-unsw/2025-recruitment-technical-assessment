@@ -156,7 +156,7 @@ For example, "Skibidi Spaghetti" is composed of Meatballs, Pasta, and Tomatoes:
 {
   "type": "recipe",
   "name": "Meatball",
-  "ingredients": [
+  "requiredItems": [
     {
       "name": "Beef",
       "quantity": 2
@@ -170,7 +170,7 @@ For example, "Skibidi Spaghetti" is composed of Meatballs, Pasta, and Tomatoes:
 {
   "type": "recipe",
   "name": "Pasta",
-  "ingredients": [
+  "requiredItems": [
     {
       "name": "Flour",
       "quantity": 3
@@ -244,6 +244,9 @@ The endpoint should additionally return with status code `400` if:
 - For cases where a `HTTP 400` status code should be returned, the autotests focus only on the correct status code being returned and do not check or consider error messages.
 - Feel free to use any additional libraries, packages, or imports that you find necessary. (make sure that the package/package lock or requirements.txt files are updated accordingly)
 
+[Task 3]
+- The behaviour for a list with an empty `requiredItems` list is undefined. You do not need to handle this case.
+- You can assume the returned `ingredients` in the recipe summary may be returned in any order.
 
 ## Getting set up
 A basic flask/express application has been set up for you in `[py|ts]_template/devdonalds.py`, including some endpoints. To run it, enter `./run.sh` in the `[py|ts]_template` folder, and a server should be spun up on port 8080.
