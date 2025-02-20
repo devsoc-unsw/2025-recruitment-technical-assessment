@@ -2,7 +2,7 @@
     {
       "name": "AGSM", 
       "rooms_available": 9,
-      "building_file": "./agsm.webp"
+      "building_picture": "./agsm.webp"
     },
     {
       "name": "Ainsworth Building",
@@ -12,7 +12,7 @@
     {
       "name": "Anita B Lawrence Centre",
       "rooms_available": 44,
-      "building_picture": "./anitb.webp"
+      "building_picture": "./anitab.webp"
     },
     {
       "name": "Biological Sciences",
