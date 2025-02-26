@@ -2,10 +2,11 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    min-height: 100vh;
 }
 
 .building {
     width: 18%;
-    height: auto;
+    height: 300px;
     background-size: cover;
 }
