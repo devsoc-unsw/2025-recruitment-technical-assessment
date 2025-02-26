@@ -1,16 +1,44 @@
 .header {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    border-bottom: solid 1px lightgray;
-    padding-bottom: 10px;
-    padding-top: 5px;
 }
 
-.header .row-one {
+button {
+    border-style: solid;
+    border-color: orange;
+}
+
+input {
+    width: 50%;
+    height: 40px;
+    border-color: lightgray;
+}
+
+.header .row-one, .header .row-two {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+
+.header .row-one {
+    padding-bottom: 10px;
+    padding-top: 5px;
+    border-bottom: solid 1px lightgray;
+}
+
+.header .row-two {
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header .row-two > button {
+    width: 125px;
+    height: 40px;
+    background-color: white;
+    border-style: solid;
 }
 
 .header .row-one .left, .header .row-one .right {
@@ -31,15 +59,13 @@
 
 .header .row-one .right {
     gap: 10px;
-    margin-right: 10px;
+    padding-right: 10px;
 }
 
 .header .row-one .right > button {
     width: 40px;
     height: 40px;
     box-shadow: none;
-    border-style: solid;
-    border-color: orange;
     border-width: 1.5px;
     border-radius: 5px;
     background-color: white;

@@ -19,6 +19,12 @@ function Header() {
                         <button>Button 4</button>
                     </div>
                 </div>
+
+                <div className="row-two">
+                    <button>Filters</button>
+                    <input type="text" placeholder="Search for a building"></input>
+                    <button>Sort</button>
+                </div>
             </div>
         </>
     )
