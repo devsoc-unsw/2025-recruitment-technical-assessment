@@ -9,9 +9,9 @@ function BuildingsList() {
             <div className="building" style={{ backgroundImage: `url(${x.building_picture})` }}>
                 <div className="rooms-available-container">
                     <div className="rooms-available">
-                        <p>
-                            {x.rooms_available} rooms available
-                        </p>
+                        <span>
+                            🟢 {x.rooms_available} rooms available
+                        </span>
                     </div>
                 </div>
                 <div className="building-name">
@@ -21,8 +21,6 @@ function BuildingsList() {
         )
     })
 
-    console.log(data[0].building_picture)
-    const agsmImg = data[0].building_picture
     return (
         <div className="buildings-container">
             {buildings}
