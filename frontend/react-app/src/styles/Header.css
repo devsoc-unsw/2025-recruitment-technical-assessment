@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
@@ -29,9 +31,10 @@ input {
 }
 
 .header .row-two {
+    width: 97.5%;
+    display: flex;
+    justify-content: space-between;
     padding-top: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 .header .row-two > button {
