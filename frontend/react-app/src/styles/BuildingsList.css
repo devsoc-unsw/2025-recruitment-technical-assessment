@@ -7,12 +7,49 @@
     padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
+    overflow: hidden;
 }
 
 .building {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 350px;
     height: 410px;
     background-size: cover;
     margin: 0;
     border-radius: 20px;
+}
+
+.building .rooms-available-container {
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+    margin-right: 10px;
+
+}
+
+.building .rooms-available-container .rooms-available {
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 41px;
+}
+
+.building .building-name {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 90%;
+    height: 60px;
+    background-color: orange;
+    padding-left: 20px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
 }
