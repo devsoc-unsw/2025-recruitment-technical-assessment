@@ -1,14 +1,31 @@
+
+
+import { useState } from 'react';
+import freeroomsDoorClosed from "../assets/freeroomsDoorClosed.png"
 import freeRoomsLogo from "../assets/freeRoomsLogo.png";
 import "../styles/Header.css"
 
+
+
 function Header() {
+
+    const [doorOpened, setDoorOpened] = useState(true);
+
+    function changeDoor() {
+        setDoorOpened(prevState => !prevState);
+    }
 
     return (
         <>
             <div className="header">
                 <div className="row-one">
                     <div className="left">
-                        <img src={freeRoomsLogo}></img>
+                        <img 
+                            src={doorOpened ? freeRoomsLogo : freeroomsDoorClosed}
+                            alt="FreeRooms Logo"
+                            onClick={changeDoor} 
+                        />
+
                         <span>Freerooms</span>
                     </div>
 
