@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    width: 100%;
+    border-bottom: solid 1px lightgray;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+.header .row-one {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header .row-one .left, .header .row-one .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .row-one .left > img {
+    width: 50px;
+    height: auto;
+}
+
+.header .row-one .left > span {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.header .row-one .right {
+    gap: 10px;
+    margin-right: 10px;
+}
+
+.header .row-one .right > button {
+    width: 40px;
+    height: 40px;
+    box-shadow: none;
+    border-style: solid;
+    border-color: orange;
+    border-width: 1.5px;
+    border-radius: 5px;
+    background-color: white;
+}
