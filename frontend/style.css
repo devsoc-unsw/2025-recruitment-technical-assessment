@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* Universal */
+
+* { 
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    color: #df7739;
+    text-decoration: none;
+}
+
+/* Nav Bar */
+
+#logo {
+    margin-top: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-bottom: 0.1rem solid #f3f3f3;
+
+}
+
+.nav-icons {
+    border: 0.1rem solid #df7739;
+    border-radius: 5px;
+
+    padding: 0.2rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+
+}
+
+.nav-icons:hover {
+    color: white;
+    background-color: #df7739;
+}
+
+/* Search Bar */
+
+.flex-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+
+    width: 4rem;
+    height: 2rem;
+    border: 0.15rem solid #df7739;
+    border-radius: 5px;
+}
+
+.search {
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* Flex */
+
+.flex {
+    display: flex;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
