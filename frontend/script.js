@@ -8,24 +8,44 @@ fetch('data.json')
     });
 
 function createElement(building) {
-    //alert(building.building_picture);
     const grid = document.getElementById('grid');
     
-    // create a new div / grid box
+    // creates a new div / grid box 
     const box = document.createElement('div');
     box.classList.add('grid-box');
     grid.appendChild(box);
 
-   /*  // add building images
-    const buildingImage = document.createElement('img');
-    buildingImage.src = "assets/" + building.building_picture;
-    buildingImage.classList.add('buildingImage');
-    grid.appendChild(buildingImage); */
+    // add building images
+    let url = building.building_picture;
+    url = url.replace("./", "");
+    //alert(`url(assets/${url})`);
+    box.style.backgroundImage = `url(assets/${url})`;
+    box.style.backgroundSize = 'cover';
+    box.style.backgroundPosition = 'centre'; 
+
+    // creates box to display rooms avaliable
+    const availableBox = document.createElement('div');
+    availableBox.classList.add('available-box');
+    box.prepend(availableBox);
+
+    // adds availability circle indicator
+    const circle = document.createElement('div');
+    circle.classList.add('circle');
+    if (building.rooms_available > 0) {
+        circle.classList.add('green');
+    }
+    availableBox.appendChild(circle);
+        
+    // adds availability text
+    const avaliablility = document.createElement('p');
+    avaliablility.innerText = building.rooms_available + " rooms available"; 
+    avaliablility.classList.add('available-text');
+    availableBox.appendChild(avaliablility);
 
     // add building name
     const buildingName = document.createElement('p');
     buildingName.innerText = building.name;
-    buildingName.classList.add('grid-text');
+    buildingName.classList.add('building-name');
     box.appendChild(buildingName);
 }
 

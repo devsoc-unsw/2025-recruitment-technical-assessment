@@ -115,13 +115,45 @@ nav {
 }
 
 .grid-box {
-    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border-radius: 10px;
 }
 
-.grid-text {
+.building-name {
     color: white;
     background-color: #df7739;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 8px;
+}
+
+.circle {
+    width: 0.6rem;         
+    height: 0.6rem;    
+    margin-top: 0.75rem;   
+    background-color: #c86363; 
+    border-radius: 50%;    
+}
+
+.green {
+    background-color: #67ac5f;
+}
+
+.available-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 0.5rem;
+    margin-left: 9rem;
+    margin-right: 0.5rem;
+}
+
+.available-text {
+    font-size: x-small;
 }
 
 /* Flex */
