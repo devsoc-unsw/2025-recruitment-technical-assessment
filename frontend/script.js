@@ -18,7 +18,6 @@ function createElement(building) {
     // add building images
     let url = building.building_picture;
     url = url.replace("./", "");
-    //alert(`url(assets/${url})`);
     box.style.backgroundImage = `url(assets/${url})`;
     box.style.backgroundSize = 'cover';
     box.style.backgroundPosition = 'centre'; 

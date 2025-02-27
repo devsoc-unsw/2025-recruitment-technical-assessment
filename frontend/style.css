@@ -129,6 +129,10 @@ nav {
     border-radius: 8px;
 }
 
+.building-name:hover {
+    background-color: #c66933;
+}
+
 .circle {
     width: 0.6rem;         
     height: 0.6rem;    
