@@ -1,6 +1,16 @@
 
 let isOpen = true;
 
+fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(createElement);
+    });
+
+function createElement(building) {
+    alert(building.name);
+}
+
 function changeLogo() {
     if (isOpen) {
         isOpen = false;
