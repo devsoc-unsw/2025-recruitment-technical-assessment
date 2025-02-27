@@ -8,7 +8,25 @@ fetch('data.json')
     });
 
 function createElement(building) {
-    alert(building.name);
+    //alert(building.building_picture);
+    const grid = document.getElementById('grid');
+    
+    // create a new div / grid box
+    const box = document.createElement('div');
+    box.classList.add('grid-box');
+    grid.appendChild(box);
+
+   /*  // add building images
+    const buildingImage = document.createElement('img');
+    buildingImage.src = "assets/" + building.building_picture;
+    buildingImage.classList.add('buildingImage');
+    grid.appendChild(buildingImage); */
+
+    // add building name
+    const buildingName = document.createElement('p');
+    buildingName.innerText = building.name;
+    buildingName.classList.add('grid-text');
+    box.appendChild(buildingName);
 }
 
 function changeLogo() {

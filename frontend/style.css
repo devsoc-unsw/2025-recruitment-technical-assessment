@@ -104,7 +104,7 @@ nav {
 
 /* Main Body */
 
-.grid {
+#grid {
     margin-top: 1rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -114,10 +114,16 @@ nav {
     grid-gap: 1rem;
 }
 
-.room {
+.grid-box {
     background-color: aqua;
     border-radius: 10px;
 }
+
+.grid-text {
+    color: white;
+    background-color: #df7739;
+}
+
 /* Flex */
 
 .flex {

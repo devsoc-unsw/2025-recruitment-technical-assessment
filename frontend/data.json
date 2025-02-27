@@ -2,7 +2,7 @@
     {
       "name": "AGSM", 
       "rooms_available": 9,
-      "building_file": "./agsm.webp"
+      "building_picture": "./agsm.webp"
     },
     {
       "name": "Ainsworth Building",
