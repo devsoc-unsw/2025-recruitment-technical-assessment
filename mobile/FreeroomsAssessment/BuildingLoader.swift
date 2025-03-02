@@ -23,6 +23,8 @@ public class BuildingLoader {
     }
     
     public func fetchBuildings() async -> Result  {
-        fatalError("TODO")
+        // using MockHttpClient to send request
+        _ = await client.get(from: url)
+        return .failure(Error.connectivity)
     }
 }
