@@ -22,9 +22,15 @@ public class BuildingLoader {
         self.url = url
     }
     
-    public func fetchBuildings() async -> Result  {
-        // using MockHttpClient to send request
-        _ = await client.get(from: url)
-        return .failure(Error.connectivity)
+    public func fetchBuildings() async -> Result {
+        let response = await client.get(from: url)
+        
+        switch response {
+        case .failure:
+            return .failure(Error.connectivity)
+            
+        case .success:
+            return .success([])
+        }
     }
 }
