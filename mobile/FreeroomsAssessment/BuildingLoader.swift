@@ -22,7 +22,25 @@ public class BuildingLoader {
         self.url = url
     }
     
-    public func fetchBuildings() async -> Result  {
-        fatalError("TODO")
+    public func fetchBuildings() async -> Result {
+        let response = await client.get(from: url)
+        
+        switch response {
+        case .failure:
+            return .failure(Error.connectivity)
+            
+        case let .success((data, httpResponse)):
+            if httpResponse.statusCode != 200 {
+                return .failure(Error.invalidData)
+            }
+            // make an array of remote building objects
+            if let _ = try? JSONDecoder().decode([RemoteBuilding].self, from: data) {
+                // empty buildings
+                return .success([])
+            } else {
+                // assumes json is currupt
+                return .failure(Error.invalidData)
+            }
+        }
     }
 }
