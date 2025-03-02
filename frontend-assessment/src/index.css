@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme{
+  --color-primary: #ed6100 ;
+}
+
+* {
+
+}
+
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+h1 {
+  font-family: 'Arial';
+}
+
+h2 {
+  font-family: 'Arial';
+}
+
+
+
+
