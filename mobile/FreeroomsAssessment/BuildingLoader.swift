@@ -33,7 +33,14 @@ public class BuildingLoader {
             if httpResponse.statusCode != 200 {
                 return .failure(Error.invalidData)
             }
-            return .success([])
+            // make an array of remote building objects
+            if let _ = try? JSONDecoder().decode([RemoteBuilding].self, from: data) {
+                // empty buildings
+                return .success([])
+            } else {
+                // assumes json is currupt
+                return .failure(Error.invalidData)
+            }
         }
     }
 }

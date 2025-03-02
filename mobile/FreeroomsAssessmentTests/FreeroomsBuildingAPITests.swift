@@ -55,38 +55,38 @@ final class FreeroomsBuildingAPITests {
         #expect(client.networkCallCount == 1)
     }
     
-//    /// Ensures that HTTP status codes outside `200` (e.g., 199, 201, 300, 400, 500) trigger an error.
-//    @Test("Building loader throws error on non 200 HTTP response", arguments: [199, 201, 300, 400, 500])
-//    func buildingLoaderThrowsErrorOnNon200HttpResponse(statusCode code: Int) async {
-//        let (client, sut) = makeSut()
-//        client.setNextRequestToSucceedWithStatusCode(code)
-//        
-//        switch await sut.fetchBuildings() {
-//        case let .success(response):
-//            Issue.record("Expected an error but got \(response)")
-//        case let .failure(error):
-//            #expect(error as? BuildingLoader.Error == BuildingLoader.Error.invalidData)
-//        }
-//        #expect(client.networkCallCount == 1)
-//    }
-//    
-//    /// Ensures that an empty response from the API correctly results in an empty list.
-//    @Test("Building loader returns empty list of buildings")
-//    func buildingLoaderReturnsEmptyListOfBuildings() async {
-//        let (client, sut) = makeSut()
-//        client.setNextRequestToSucceedWithReturnedData([RemoteBuilding]().data)
-//        
-//        var receivedBuildings: [Building]?
-//        switch await sut.fetchBuildings() {
-//        case let .success(fetchedBuildings):
-//            receivedBuildings = fetchedBuildings
-//        case let .failure(error):
-//            Issue.record("Expected a list of empty buildings but got \(error)")
-//        }
-//        
-//        #expect(receivedBuildings?.isEmpty == true)
-//        #expect(client.networkCallCount == 1)
-//    }
+    /// Ensures that HTTP status codes outside `200` (e.g., 199, 201, 300, 400, 500) trigger an error.
+    @Test("Building loader throws error on non 200 HTTP response", arguments: [199, 201, 300, 400, 500])
+    func buildingLoaderThrowsErrorOnNon200HttpResponse(statusCode code: Int) async {
+        let (client, sut) = makeSut()
+        client.setNextRequestToSucceedWithStatusCode(code)
+        
+        switch await sut.fetchBuildings() {
+        case let .success(response):
+            Issue.record("Expected an error but got \(response)")
+        case let .failure(error):
+            #expect(error as? BuildingLoader.Error == BuildingLoader.Error.invalidData)
+        }
+        #expect(client.networkCallCount == 1)
+    }
+    
+    /// Ensures that an empty response from the API correctly results in an empty list.
+    @Test("Building loader returns empty list of buildings")
+    func buildingLoaderReturnsEmptyListOfBuildings() async {
+        let (client, sut) = makeSut()
+        client.setNextRequestToSucceedWithReturnedData([RemoteBuilding]().data)
+        
+        var receivedBuildings: [Building]?
+        switch await sut.fetchBuildings() {
+        case let .success(fetchedBuildings):
+            receivedBuildings = fetchedBuildings
+        case let .failure(error):
+            Issue.record("Expected a list of empty buildings but got \(error)")
+        }
+        
+        #expect(receivedBuildings?.isEmpty == true)
+        #expect(client.networkCallCount == 1)
+    }
 //    
 //    /// Verifies that valid building data is correctly returned and  decoded from the API.
 //    @Test("Building loader returns list of buildings")
