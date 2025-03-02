@@ -29,7 +29,10 @@ public class BuildingLoader {
         case .failure:
             return .failure(Error.connectivity)
             
-        case .success:
+        case let .success((data, httpResponse)):
+            if httpResponse.statusCode != 200 {
+                return .failure(Error.invalidData)
+            }
             return .success([])
         }
     }
